@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>服务商</title>
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_838475_9b4zin0pa9m.css">
+  <!-- build:css -->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/template.js"></script>
+</head>
+<body>
+<header id="header">
+  <div class="header-wrap clearFixed">
+    <h1 class="logo fl">
+      <a href="#">
+        <img src="https://www.daoway.cn/pcimages/logo.png" alt="logo">
+      </a>
+    </h1>
+    <div class="nav fr">
+        <span class="span-item location">
+          <a href="#">
+            <i class="iconfont icon-dingwei red"></i>
+            <i>北京</i>
+            <i>切换城市</i>
+          </a>
+        </span>
+      <span class="span-item"><a href="index.html">首页</a></span>
+      <span class="span-item"><a href="#">到位APP</a></span>
+      <span class="span-item active"><a href="service.html">服务商</a></span>
+      <span class="span-item"><a href="#">商家入驻</a></span>
+      <span class="span-item"><a href="#">关于我们</a></span>
+      <span class="span-item"><a href="#" class="login red">商家登录</a></span>
+    </div>
+  </div>
+</header>
+<!--service内容-->
+<!--title-->
+<h2 class="title">服务商</h2>
+<div id="serviceCon">
+  <div class="scLeft">
+    <div class="tabs">
+      <ul class="tabUl">
+        <script id="tabLi" type="text/html">
+          {{each data as value i}}
+           <li>
+             <a href="serverComment.html">
+              <img src={{value.imgUrl}} alt="">
+              <p class="pt">
+                <img src="images/home.png" alt="">
+                <b>{{value.title}}</b>
+              </p>
+              <p class="pp">
+                已接单{{value.orderCount}}单
+                <i>好评{{value.positiveRate}}</i>
+              </p>
+             </a>
+        </li>
+          {{/each}}
+        </script>
+      </ul>
+    </div>
+    <div class="lookMore">
+      <span>
+        查看更多商家
+        <img style="margin-left: 5px" src="" width="12" height="7">
+      </span>
+    </div>
+  </div>
+  <div class="scRight">
+    <img src="images/tuijianfuwushang_03.jpg" alt="">
+    <div class="erweima">
+      <img src="images/daowayApp.png" alt="">
+    </div>
+  </div>
+</div>
+<!--底部-->
+<div class="baozhang" id="baozhang">
+  <h2>到位<i>服务</i>保障</h2>
+  <p>到位平台担保交易安全，交易未成功100%退款</p>
+</div>
+<div class="servi">
+  <ul>
+    <li><img src="https://www.daoway.cn/pcimages/anquan.jpg" width="20" height="20">优选服务</li>
+    <li><img src="https://www.daoway.cn/pcimages/anquan.jpg" width="20" height="20">全程保障</li>
+    <li><img src="https://www.daoway.cn/pcimages/anquan.jpg" width="20" height="20">安全无忧</li>
+  </ul>
+</div>
+<footer class="footer">
+  <dl>
+    <dt>热门城市</dt>
+    <dd>
+      <a href="#">北京</a>
+      <a href="#">上海</a>
+      <a href="#">广州</a>
+      <a href="#">深圳</a>
+      <a href="#">成都</a>
+      <a href="#">天津</a>
+      <a href="#">南京</a>
+      <a href="#">杭州</a>
+      <a href="#">重庆</a>
+      <a href="#">苏州</a>
+      <a href="#">武汉</a>
+      <a href="#">长沙</a>
+      <a href="#">济南</a>
+      <a href="#">郑州</a>
+      <a href="#">西安</a>
+      <a href="#">沈阳</a>
+      <a href="#">福州</a>
+      <a href="#">厦门</a>
+      <a href="#">南昌</a>
+      <a href="#">合肥</a>
+      <a href="#">宁波</a>
+      <a href="#">无锡</a>
+      <a href="#">青岛</a>
+      <a href="#">大连</a>
+      <a href="#">东莞</a>
+      <a href="#">佛山</a>
+      <a href="#">石家庄</a>
+      <a href="#">哈尔滨</a>
+      <a href="#">太原</a>
+      <a href="#">昆明</a>
+      <a href="#">贵阳</a>
+      <a href="#">南宁</a>
+      <a href="#">温州</a>
+    </dd>
+  </dl>
+</footer>
+<div class="beian">
+  <p id="htit">合作伙伴</p>
+  <ul class="hezuo">
+    <li><img src="./images/taidi.jpg"></li>
+    <li><img src="./images/meidao.jpg"></li>
+    <li><img src="./images/qiaomao.png"></li>
+    <li><img src="./images/guanjia.jpg"></li>
+    <li><img src="./images/shanxiu.jpg"></li>
+    <li><img src="./images/jiazheng.png"></li>
+    <li><img src="./images/jiaxiu.jpg"></li>
+    <li><img src="./images/lidashi.jpg"></li>
+    <li><img src="./images/zuomu.jpg"></li>
+  </ul>
+  <ul class="hezuo" style="padding-top:20px; clear: both">
+    <li><img src="./images/lidashi.jpg"></li>
+    <li><img src="./images/jiawu.png"></li>
+    <li><img src="./images/hua.jpg"></li>
+    <li><img src="./images/meidao.png"></li>
+    <li><img src="./images/jishbang.jpg"></li>
+    <li><img src="./images/xiaohushi.jpg"></li>
+    <li><img src="./images/weixiu.jpg" ></li>
+    <li><img src="./images/jishbang.jpg"></li>
+    <li><img src="./images/xiaohushi.jpg"></li>
+  </ul>
+</div>
+<div class="company">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</div>
+
+<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+</body>
+<!-- build:js -->
+<script type="text/javascript" src="js/service.js"></script>
+<!-- endbuild -->
+</html>

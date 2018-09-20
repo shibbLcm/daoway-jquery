@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>云家政</title>
+  <link rel="shortcut icon" href="https://www.daoway.cn/pcimages/favicon.png">
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_838475_9b4zin0pa9m.css">
+  <!-- build:css -->
+  <!-- endbuild -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/template.js"></script>
+</head>
+<body style="background: #f8f8f8">
+</body>
+<!--头部-->
+<header id="header">
+  <div class="header-wrap clearFixed">
+    <h1 class="logo fl">
+      <a href="#">
+        <img src="https://www.daoway.cn/pcimages/logo.png" alt="logo">
+      </a>
+    </h1>
+    <div class="nav fr">
+        <span class="span-item location">
+          <a href="#">
+            <i class="iconfont icon-dingwei red"></i>
+            <i>北京</i>
+            <i>切换城市</i>
+          </a>
+        </span>
+      <span class="span-item"><a href="index.html">首页</a></span>
+      <span class="span-item"><a href="#">到位APP</a></span>
+      <span class="span-item active"><a href="service.html">服务商</a></span>
+      <span class="span-item"><a href="#">商家入驻</a></span>
+      <span class="span-item"><a href="#">关于我们</a></span>
+      <span class="span-item"><a href="#" class="login red">商家登录</a></span>
+    </div>
+  </div>
+</header>
+<!--内容区-->
+<div id="companyCon">
+    <div class="ccWrap">
+      <script id="ccWrap" type="text/html">
+        {{each data as item i}}
+          <div class="ccLeft">
+            <b>{{item.name}}</b>
+            <i>营业时间：<em>{{item.seredate}}</em></i>
+            <i>最近可预约时间：<em>{{item.servedatalately}}</em></i>
+          </div>
+          <div class="ccRight">
+            <ul>
+              <li><i>{{item.soldCount}}</i>成功接单<em>|</em></li>
+              <li><i>{{item.accept}}</i>接单率<em>|</em></li>
+              <li><i>{{item.praise}}</i>好评率</li>
+            </ul>
+          </div>
+        {{/each}}
+      </script>
+    </div>
+
+  <div class="navBar">
+    <ul>
+      <li class="active"><a href="#ilTop">服务项目</a></li>
+      <li><a href="#jianjie">商家简介</a></li>
+      <li><a href="#comments">用户评论</a></li>
+    </ul>
+  </div>
+  <div class="ccInfo">
+    <div class="infoLeft">
+      <div id="ilTop">
+        <h3>
+          <span class="paihang">
+            <i class="activity">服务项目</i>
+          </span>
+        </h3>
+        <div class="infoTop">
+          <script id="infoTop" type="text/html">
+            {{each data as item i}}
+              <a href="#">
+                <div class="itCon">
+                    <img class="pic" src={{item.imgUrl}} width="150" height="150">
+                    <div class="center">
+                      <i>{{item.title}}</i>
+                      <i style="color: #929292">{{item.servedes}}.</i>
+                      <i class="price">
+                        <b style="margin-left: 0">{{item.price}}<em>元/小时</em></b>
+                        <b class="oldpic">原价<del>{{item.oldPrice}}</del></b>
+                      </i>
+                    </div>
+                    <div class="right">
+                      已售
+                      <i>{{item.soldCount}}</i>
+                    </div>
+                </div>
+              </a>
+            {{/each}}
+          </script>
+        </div>
+      </div>
+      <div class="blank"></div>
+      <div id="jianjie">
+        <script id="jianjieInfo" type="text/html">
+          {{each data as item i}}
+            <h3>
+              <span class="paihang"><i class="activity">商家简介</i></span>
+            </h3>
+            <div class="companyInfo">
+              上海家谐网络科技有限公司
+              <img src="images/renzheng.jpg">
+            </div>
+            <div class="companyDes">
+             {{item.business}}
+            </div>
+          {{/each}}
+        </script>
+      </div>
+      <div class="blank" style="height : 20px"></div>
+      <div id="comments" style="margin-top: 20px">
+        <script id="comment" type="text/html">
+          {{each data as value i}}
+          <h3>
+            <span class="paihang"><i class="activity">用户评论</i><em style="color: #121212; margin-left: 15px; font-style: normal">(12131条评论)</em></span>
+          </h3>
+          <div class="comment">
+            <img src={{value.iconUrl}} width="40" height="40" class="avatar" alt="">
+            <ul>
+              <li>{{value.nick}}</li>
+              <li>
+                <span id="star" style="width: 70px; margin-left: 0">
+                  <span class="noColor" style="left: 0">
+                    <img src="images/red_star.png" width="10px" height="auto">
+                    <img src="images/red_star.png" width="10px" height="auto">
+                    <img src="images/red_star.png" width="10px" height="auto">
+                    <img src="images/gray_star.png" width="10px" height="auto">
+                    <img src="images/gray_star.png" width="10px" height="auto">
+                  </span>
+                </span>
+                <em style="margin-left: 10px">{{value.createtime}}</em>
+              </li>
+              <li class="commentdetail">{{value.comment}}</li>
+              <li class="commentposition"><img src="images/position.jpg" width="9" height="11">{{value.city}}  {{area}}</li>
+            </ul>
+          </div>
+          {{/each}}
+        </script>
+      </div>
+      <div class="fenye">
+        <a href="#comments" class="pageup greycolor">&lt;上一页</a>
+        <div class="showPage" style="display: inline-block">
+          <a href="#comments" class="num acv">1</a>
+          <a href="#comments" class="num">2</a>
+          <a href="#comments" class="num">3</a>
+          <a href="#comments" class="num">4</a>
+          <a href="#comments" class="num">5</a>
+          <a href="#comments" class="num">6</a>
+          <a href="#comments" class="num">7</a>
+          <a href="#comments" class="num">8</a>
+          <a href="#comments" class="num">9</a>
+          <a href="#comments" class="num">10</a>
+        </div>
+        <a href="#comments" class="pagedown ">下一页&gt;</a>
+      </div>
+    </div>
+    <div class="infoRight">
+      <div class="erweima1"></div>
+      <div class="erweima2">
+        <img src="images/daowayApp.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!--底部-->
+<div class="baozhang" id="baozhang">
+  <h2>到位<i>服务</i>保障</h2>
+  <p>到位平台担保交易安全，交易未成功100%退款</p>
+</div>
+<div class="servi">
+  <ul>
+    <li><img src="https://www.daoway.cn/pcimages/anquan.jpg" width="20" height="20">优选服务</li>
+    <li><img src="https://www.daoway.cn/pcimages/anquan.jpg" width="20" height="20">全程保障</li>
+    <li><img src="https://www.daoway.cn/pcimages/anquan.jpg" width="20" height="20">安全无忧</li>
+  </ul>
+</div>
+<footer class="footer">
+  <dl>
+    <dt>热门城市</dt>
+    <dd>
+      <a href="#">北京</a>
+      <a href="#">上海</a>
+      <a href="#">广州</a>
+      <a href="#">深圳</a>
+      <a href="#">成都</a>
+      <a href="#">天津</a>
+      <a href="#">南京</a>
+      <a href="#">杭州</a>
+      <a href="#">重庆</a>
+      <a href="#">苏州</a>
+      <a href="#">武汉</a>
+      <a href="#">长沙</a>
+      <a href="#">济南</a>
+      <a href="#">郑州</a>
+      <a href="#">西安</a>
+      <a href="#">沈阳</a>
+      <a href="#">福州</a>
+      <a href="#">厦门</a>
+      <a href="#">南昌</a>
+      <a href="#">合肥</a>
+      <a href="#">宁波</a>
+      <a href="#">无锡</a>
+      <a href="#">青岛</a>
+      <a href="#">大连</a>
+      <a href="#">东莞</a>
+      <a href="#">佛山</a>
+      <a href="#">石家庄</a>
+      <a href="#">哈尔滨</a>
+      <a href="#">太原</a>
+      <a href="#">昆明</a>
+      <a href="#">贵阳</a>
+      <a href="#">南宁</a>
+      <a href="#">温州</a>
+    </dd>
+  </dl>
+</footer>
+<div class="beian">
+  <p id="htit">合作伙伴</p>
+  <ul class="hezuo">
+    <li><img src="./images/taidi.jpg"></li>
+    <li><img src="./images/meidao.jpg"></li>
+    <li><img src="./images/qiaomao.png"></li>
+    <li><img src="./images/guanjia.jpg"></li>
+    <li><img src="./images/shanxiu.jpg"></li>
+    <li><img src="./images/jiazheng.png"></li>
+    <li><img src="./images/jiaxiu.jpg"></li>
+    <li><img src="./images/lidashi.jpg"></li>
+    <li><img src="./images/zuomu.jpg"></li>
+  </ul>
+  <ul class="hezuo" style="padding-top:20px; clear: both">
+    <li><img src="./images/lidashi.jpg"></li>
+    <li><img src="./images/jiawu.png"></li>
+    <li><img src="./images/hua.jpg"></li>
+    <li><img src="./images/meidao.png"></li>
+    <li><img src="./images/jishbang.jpg"></li>
+    <li><img src="./images/xiaohushi.jpg"></li>
+    <li><img src="./images/weixiu.jpg" ></li>
+    <li><img src="./images/jishbang.jpg"></li>
+    <li><img src="./images/xiaohushi.jpg"></li>
+  </ul>
+</div>
+<div class="company">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</div>
+<!-- build:js -->
+<script type="text/javascript" src="js/service.js"></script>
+<!-- endbuild -->
+</html>
